@@ -6,19 +6,8 @@ RUN apt-get install -y nasm
 RUN apt-get install -y xorriso
 RUN apt-get install -y grub-pc-bin
 RUN apt-get install -y grub-common
+RUN apt-get install -y libc6-dev
+RUN apt install --reinstall -y build-essential
 
 VOLUME /root/env
 WORKDIR /root/env
-
-# FROM randomdude/gcc-cross-x86_64-elf
-
-# RUN apt-get update 
-# RUN apt-get upgrade -y
-# RUN apt-get install -y nasm
-# RUN apt-get install -y xorriso
-# RUN apt-get install -y grub-pc-bin
-# RUN apt-get install -y grub-common
-
-# VOLUME /root/env
-# # ADD . /root/env
-# WORKDIR /root/env
